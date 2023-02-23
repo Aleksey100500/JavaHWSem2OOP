@@ -3,7 +3,7 @@ public class Druid extends BaseHero {
     private int mp = 200;
 
     public Druid() {
-        super(String.format("I am an Druid"), 200);
+        super(String.format("I am an Druid"), 200, 4);
         this.maxMp = 200;
         this.mp = maxMp;;
     }

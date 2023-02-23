@@ -1,11 +1,11 @@
-public class Priest extends BaseHero {
-    private int mp;
+public class Wizard extends BaseHero {
     private int maxMp;
+    private int mp = 200;
 
-    public Priest() {
-        super(String.format("I am an Priest"), 200, 3);
+    public Wizard() {
+        super(String.format("I am an Wizard"), 200, 2);
         this.maxMp = 200;
-        this.mp = maxMp;
+        this.mp = maxMp;;
     }
 
     public String getInfo() {

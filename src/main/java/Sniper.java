@@ -3,7 +3,7 @@ public class Sniper extends BaseHero {
     private int energy;
 
     public Sniper() {
-        super(String.format("I am an Sniper"), 200);
+        super(String.format("I am an Sniper"), 200, 2);
         this.maxEnergy = 200;
         this.energy = maxEnergy;
     }
