@@ -47,17 +47,8 @@ public abstract class BaseHero implements Interface{
         target.getDamage(damage, target);
     }
 
-    public ArrayList<BaseHero> createTeam(ArrayList<BaseHero> team1 ,int hero1, int hero2, int hero3) {
-        ArrayList<BaseHero> team = new ArrayList<>();
-        if (hero1 == 1 && hero2 == 2 && hero3 == 3) {
-            team.add(new Priest());
-            team.add(new Druid());
-            team.add(new Warior());
-        } else if (hero1 == 4 && hero2 == 5 && hero3 == 6) {
-            team.add(new Sniper());
-            team.add(new Wizard());
-            team.add(new Krestyanin());
-        }
-        return team;
+
+    public int getSpeed() {
+        return speed;
     }
 }

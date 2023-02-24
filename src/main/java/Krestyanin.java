@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Krestyanin extends BaseHero {
     private int maxMp;
     private int mp = 200;

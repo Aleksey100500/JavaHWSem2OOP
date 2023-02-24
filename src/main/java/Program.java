@@ -1,9 +1,7 @@
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class Program {
+
     public static void main(String[] args) {
 
         BaseHero hero_1 = new Priest();
@@ -30,35 +28,59 @@ public class Program {
         hero_4.Step(10);
         hero_1.Attack(hero_2);
 
+        ArrayList<BaseHero> listHero1 = new ArrayList<>();
+        ArrayList<BaseHero> listHero2 = new ArrayList<>();
+        createList(listHero1);
+        createList(listHero2);
 
+        for ( BaseHero hero : listHero1 ) {
+            System.out.println(hero.getInfo());
+        }
+        System.out.println("\n\n");
+
+        for ( BaseHero hero : listHero2 ) {
+            System.out.println(hero.getInfo());
+        }
+
+        System.out.println("\n\n");
+
+        listHero1.addAll(listHero2);
+        listHero1.sort(new Comparator<BaseHero>() {
+            @Override
+            public int compare(BaseHero o1, BaseHero o2) {
+                return o1.getSpeed() - o2.getSpeed();
+            }
+        });
+        for ( BaseHero hero : listHero1 ) {
+            System.out.println(hero.getInfo());
+        }
+    }
+
+    public static ArrayList<BaseHero> createList(ArrayList team) {
         Random rand = new Random();
-
-//        List<BaseHero> listHero = new ArrayList<>();
-//        for (int i = 0; i < 10; i++) {
-//            int num = rand.nextInt(1,4);
-//            switch (num) {
-//                case 1:
-//                    listHero.add(new Priest());
-//                    break;
-//                case 2:
-//                    listHero.add(new Druid());
-//                    break;
-//                case 3:
-//                    listHero.add(new Warior());
-//                    break;
-//                case 4:
-//                    listHero.add(new Sniper());
-//                    break;
-//            }
-//        }
-//        for ( BaseHero hero : listHero) {
-//            System.out.println(hero.getInfo());
-//        }
-
-
-//        team1.containsAll(team2);
-
-
-
+        for (int i = 0; i < 10; i++) {
+            int num = rand.nextInt(1,6);
+            switch (num) {
+                case 1:
+                    team.add(new Priest());
+                    break;
+                case 2:
+                    team.add(new Druid());
+                    break;
+                case 3:
+                    team.add(new Warior());
+                    break;
+                case 4:
+                    team.add(new Sniper());
+                    break;
+                case 5:
+                    team.add(new Wizard());
+                    break;
+                case 6:
+                    team.add(new Krestyanin());
+                    break;
+            }
+        }
+        return team;
     }
 }
