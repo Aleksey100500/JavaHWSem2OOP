@@ -3,7 +3,8 @@ public class Druid extends BaseHero {
     private int mp = 200;
 
     public Druid() {
-        super(String.format("I am an Druid"), 200, 4);
+        super(String.format("I am an Druid"), 200, 4,
+                Druid.rand.nextInt(10,25), 7, 1,3);
         this.maxMp = 200;
         this.mp = maxMp;;
     }

@@ -3,7 +3,8 @@ public class Warior extends BaseHero {
     private int energy;
 
     public Warior() {
-        super(String.format("I am an Warior"), 200, 5);
+        super(String.format("I am an Warior"), 200, 5,
+                Warior.rand.nextInt(30,50), 10, 10,2 );
         this.maxEnergy = 200;
         this.energy = maxEnergy;
     }

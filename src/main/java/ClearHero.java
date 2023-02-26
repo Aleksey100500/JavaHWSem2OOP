@@ -3,7 +3,7 @@ public class ClearHero extends BaseHero {
     private int maxMp;
 
     public ClearHero() {
-        super(String.format("I am an Perished"), 0, 0);
+        super(String.format("I am an Perished"), 0, 0, 0, 0, 0, 0);
         this.maxMp = 0;
         this.mp = maxMp;
     }

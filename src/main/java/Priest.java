@@ -3,7 +3,8 @@ public class Priest extends BaseHero {
     private int maxMp;
 
     public Priest() {
-        super(String.format("I am an Priest"), 200, 3);
+        super(String.format("I am an Priest"), 200, 3,
+                Priest.rand.nextInt(5,20), 3, 10, 1);
         this.maxMp = 200;
         this.mp = maxMp;
     }

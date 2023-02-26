@@ -3,7 +3,8 @@ public class Wizard extends BaseHero {
     private int mp = 200;
 
     public Wizard() {
-        super(String.format("I am an Wizard"), 200, 2);
+        super(String.format("I am an Wizard"), 200, 2,
+                Wizard.rand.nextInt(20,70), 3, 1,2);
         this.maxMp = 200;
         this.mp = maxMp;;
     }

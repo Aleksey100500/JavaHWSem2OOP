@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 public abstract class BaseHero implements Interface{
@@ -8,14 +7,20 @@ public abstract class BaseHero implements Interface{
     private int MaxHp;
     private int hp;
     private int speed;
+    private int damage, protection;
+    private  int x, y;
 
-    private static final Random rand = new Random();
+    public static Random rand = new Random();
 
-    public BaseHero(String nameHero, int hp, int speed) {
+    public BaseHero(String nameHero, int hp, int speed, int damage, int protection, int x, int y) {
         this.nameHero = nameHero;
         this.hp = hp;
         this.MaxHp = hp;
         this.speed = speed;
+        this.damage = damage;
+        this.protection = protection;
+        this.x = x;
+        this.y = y;
     }
     public String getInfo() {
         return String.format("Name: %s HP: %d Speed: %d",

@@ -1,11 +1,10 @@
-import java.util.ArrayList;
-
 public class Krestyanin extends BaseHero {
     private int maxMp;
     private int mp = 200;
 
     public Krestyanin() {
-        super(String.format("I am an Wizard"), 200, 5);
+        super(String.format("I am an Krestyanin"), 200, 5,
+                Krestyanin.rand.nextInt(15,20), 5, 1, 1);
         this.maxMp = 200;
         this.mp = maxMp;;
     }

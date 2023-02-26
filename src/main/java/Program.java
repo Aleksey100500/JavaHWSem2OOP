@@ -4,30 +4,6 @@ public class Program {
 
     public static void main(String[] args) {
 
-        BaseHero hero_1 = new Priest();
-        System.out.println(hero_1.getInfo());
-
-        BaseHero hero_2 = new Druid();
-        System.out.println(hero_2.getInfo());
-
-        BaseHero hero_3 = new Warior();
-        System.out.println(hero_3.getInfo());
-
-        BaseHero hero_4 = new Sniper();
-        System.out.println(hero_4.getInfo());
-
-        BaseHero hero_5 = new Wizard();
-        System.out.println(hero_5.getInfo());
-
-        BaseHero hero_6 = new Krestyanin();
-        System.out.println(hero_6.getInfo());
-
-        hero_1.Step(10);
-        hero_2.Step(10);
-        hero_3.Step(10);
-        hero_4.Step(10);
-        hero_1.Attack(hero_2);
-
         ArrayList<BaseHero> listHero1 = new ArrayList<>();
         ArrayList<BaseHero> listHero2 = new ArrayList<>();
         createList(listHero1);
@@ -36,13 +12,12 @@ public class Program {
         for ( BaseHero hero : listHero1 ) {
             System.out.println(hero.getInfo());
         }
-        System.out.println("\n\n");
+        delimiter();
 
         for ( BaseHero hero : listHero2 ) {
             System.out.println(hero.getInfo());
         }
-
-        System.out.println("\n\n");
+        delimiter();
 
         listHero1.addAll(listHero2);
         listHero1.sort(new Comparator<BaseHero>() {
@@ -55,7 +30,6 @@ public class Program {
             System.out.println(hero.getInfo());
         }
     }
-
     public static ArrayList<BaseHero> createList(ArrayList team) {
         Random rand = new Random();
         for (int i = 0; i < 10; i++) {
@@ -82,5 +56,13 @@ public class Program {
             }
         }
         return team;
+    }
+
+    public static void delimiter() {
+        String del = "#";
+        for (int i = 0; i < 70; i++) {
+            System.out.printf("%s", del);
+        }
+        System.out.println("\n");
     }
 }
